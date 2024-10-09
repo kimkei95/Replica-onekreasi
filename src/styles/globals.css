@@ -25,3 +25,24 @@ body {
     text-wrap: balance;
   }
 }
+
+.card {
+  @apply transition duration-300;
+}
+
+.card:hover {
+  @apply shadow-lg;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  pointer-events: none;
+}
